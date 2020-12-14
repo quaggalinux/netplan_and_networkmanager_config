@@ -49,20 +49,20 @@ $su
   
 无论接口是否有IPv4或IPv6地址,我们都可以同时设置DNS服务器为IPv4及IPv6地址  
   
-以下内容开始的!号全部删除,因为github排版的问题没有缩进,懒得搞了,所以几个!号
+以下内容由于使用空格缩进,而使用了全角输入空格,所以拷贝文本后要把空格重新在英文状态下输入一次!!!!!!!!!
 
-)network:  
-)  version: 2  
-!  renderer: networkd  
-!  ethernets:  
-!    eth0:  
-!      dhcp4: no  
-!      dhcp6: yes  
-!      dhcp6-overrides:  
-!        use-dns: no  
-!      nameservers:  
-!        search: [local,node]  
-!        addresses: [202.59.114.100, 202.59.114.143, "2001:4860:4860::8888"]  
+network:  
+　version: 2  
+　renderer: networkd  
+　　ethernets:  
+　　　eth0:  
+　　　　dhcp4: no  
+　　　　dhcp6: yes  
+　　　　dhcp6-overrides:  
+　　　　　use-dns: no  
+　　　　nameservers:  
+　　　　　search: [local,node]  
+　　　　　addresses: [202.59.114.100, 202.59.114.143, "2001:4860:4860::8888"]  
   
 另外是一般情况下我们改DNS的正常样板配置,因为已经用了dhcp4: yes设置,所以dhcp6设置可以省略了  
   
