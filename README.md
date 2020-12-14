@@ -1,5 +1,5 @@
 # netplan_and_networkmanager_config  
-netplan配置及改回network-manager配置方法  
+ubuntu使用netplan配置及改回network-manager配置方法  
   
 前几天有个玩家问我ubuntu18怎么改DNS地址,而且重启也可以保持,我一听就知道这货奔那个飞去了,幸好之前搞过IPv6小鸡,磨了DNS设置这把砍柴刀很久了,那就砍它母鸡的(∩•̀ω•́)⊃-*⋆  
   
