@@ -52,7 +52,7 @@ $su
 以下内容开始的!号全部删除,因为github排版的问题没有缩进,懒得搞了,所以几个!号
 
 !network:  
-!  version: 2  
+*  version: 2  
 !  renderer: networkd  
 !  ethernets:  
 !    eth0:  
