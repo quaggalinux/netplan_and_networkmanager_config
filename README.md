@@ -49,7 +49,7 @@ $su
   
 无论接口是否有IPv4或IPv6地址,我们都可以同时设置DNS服务器为IPv4及IPv6地址  
   
-以下内容由于使用空格缩进,而使用了全角输入空格,所以拷贝文本后要把空格重新在英文状态下输入一次!!!!!!!!!
+以下内容由于使用空格缩进,而使用了全角输入空格,所以拷贝文本后要把空格重新在英文状态下输入一次!!!!!!!!!   
 
 network:  
 　version: 2  
@@ -74,24 +74,29 @@ search:项没有特殊要求的话可以随便写一项或两项,如果只写前
   
 而且一定要注意子项缩进两个空格,同等级别子项必须对齐,任何一项不满足会报错,但netplan try不告诉你具体原因让你无法查找  
   
+以下内容由于使用空格缩进,而使用了全角输入空格,所以拷贝文本后要把空格重新在英文状态下输入一次!!!!!!!!!  
+  
 network:  
-  version: 2  
-  renderer: networkd  
-  ethernets:  
-    ens33:  
-      dhcp4: yes  
-      dhcp4-overrides:  
-        use-dns: no  
-      nameservers:  
-        search: [internet]  
-        addresses: [202.59.114.100, 202.59.114.143, "2001:4860:4860::8888"]  
+　version: 2  
+　renderer: networkd  
+　ethernets:  
+　　ens33:  
+　　　dhcp4: yes  
+　　　dhcp4-overrides:  
+　　　　use-dns: no  
+　　　nameservers:  
+　　　　search: [internet]  
+　　　　addresses: [202.59.114.100, 202.59.114.143, "2001:4860:4860::8888"]  
   
 一般系统安装后的netplan配置,已经同时支持IPv6的DHCP请求  
+　　
+以下内容由于使用空格缩进,而使用了全角输入空格,所以拷贝文本后要把空格重新在英文状态下输入一次!!!!!!!!! 
+　　
 network:  
-  ethernets:  
-    ens33:  
-      dhcp4: true  
-  version: 2  
+　ethernets:  
+　　ens33:  
+　　　dhcp4: true  
+　version: 2  
   
  # 第3种方法
  
@@ -116,12 +121,14 @@ $su
   
 改成以下的样子，就可以让NetworkManager控制网络设置  
   
+以下内容由于使用空格缩进,而使用了全角输入空格,所以拷贝文本后要把空格重新在英文状态下输入一次!!!!!!!!! 
+　　
 network:  
-  renderer: NetworkManager  
-  ethernets:  
-    ens33:  
-      dhcp4: true  
-  version: 2  
+　renderer: NetworkManager  
+　ethernets:  
+　　ens33:  
+　　　dhcp4: true  
+　version: 2  
   
 保存后退出，执行 netplan try 等待几秒钟，如果屏幕的读秒倒计时一直在动，说明修改没问题，可以按回车接受新配置  
   
