@@ -1,0 +1,2 @@
+# netplan_and_networkmanager_config
+netplan配置及改回network-manager配置方法
